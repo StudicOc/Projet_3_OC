@@ -39,11 +39,14 @@ button {
   border: 1px solid white;
   border-radius: 2rem 2rem 2rem 2rem;
   background-color: #ff79da;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
   font-weight: bold;
   color: white;
 }
-
+.concept-store {
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
 .restaurant {
   width: 100%;
   height: auto;
@@ -67,7 +70,4 @@ ul li {
   margin: 1rem;
   padding: 1.3rem;
   background-color: #f2f2f2;
-}
-li {
-  padding-left: 3.5rem;
 }
