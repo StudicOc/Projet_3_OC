@@ -2,7 +2,10 @@
   font-family: "Roboto";
   src: url("../Font/Roboto/Roboto-Light.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../Font/Shrikand/Shrikhand-Regular.ttf") format("truetype");
+}
 * {
   font-family: "Roboto";
   margin: 0;
@@ -12,62 +15,46 @@
   width: 200px;
 }
 .header-logo {
-  /* sass */
   display: flex;
   justify-content: center;
   margin-top: 1rem;
   object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-.search-city {
+input[type="text"] {
+  padding: 1.5rem;
+  border: none;
+  appearance: none;
+  background: #e8ebeb;
+  outline: none;
+  box-shadow: inset 0 10px 10px -6px#BDBFBF;
+}
+
+.input-search input[type="text"] {
+  padding-left: 7rem;
+}
+
+.input-search {
+  position: relative;
+}
+.input-search i {
+  position: absolute;
+  left: 0;
+  top: 23px;
+  margin-left: 5rem;
+}
+::placeholder {
+  font-weight: bold;
+}
+h1 {
+  font-family: "Shrikand";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.descover-item {
   display: flex;
   justify-content: center;
-  background-color: #e8e8e8;
-  box-shadow: inset 0 10px 10px -6px#D6D6D6;
-  max-width: 100%;
-  padding: 0.8rem;
-  margin-top: 0.5rem;
-}
-.style-search {
-  /* style d'écriture de la localisation */
-  font-weight: bold;
-}
-.fa-map-marker-alt {
-  padding-right: 1rem;
-}
-button {
-  border: 1px solid white;
-  border-radius: 2rem 2rem 2rem 2rem;
-  background-color: #ff79da;
-  padding: 1rem 2rem 1rem 2rem;
-  font-weight: bold;
-  color: white;
-}
-.concept-store {
-  background-color: #f2f2f2;
-  padding: 1rem;
-}
-.restaurant {
-  width: 100%;
-  height: auto;
-  border-radius: 1rem 1rem 0 0;
-  object-fit: cover;
-}
-article {
-  border-radius: 15px;
-  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 20%);
-  background-color: white;
-  padding: 0;
-}
-ul {
-  list-style-type: none;
-}
-ul li {
-  font-weight: bold;
-  border: 2px solid #f2f2f2;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1.3rem;
-  background-color: #f2f2f2;
 }
