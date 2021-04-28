@@ -14,6 +14,23 @@
 .logo {
   width: 200px;
 }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../Font/Roboto/Roboto-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../Font/Shrikand/Shrikhand-Regular.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  width: 200px;
+}
 .header-logo {
   display: flex;
   justify-content: center;
@@ -29,14 +46,16 @@ input[type="text"] {
   background: #e8ebeb;
   outline: none;
   box-shadow: inset 0 10px 10px -6px#BDBFBF;
+  text-align: center;
 }
 
 .input-search input[type="text"] {
-  padding-left: 7rem;
+  flex-grow: 1; /*==== ajout =====*/
 }
 
 .input-search {
   position: relative;
+  display: flex; /*==== ajout =====*/
 }
 .input-search i {
   position: absolute;
@@ -44,17 +63,35 @@ input[type="text"] {
   top: 23px;
   margin-left: 5rem;
 }
+.fa-map-marker-alt {
+  position: absolute;
+}
 ::placeholder {
   font-weight: bold;
 }
-h1 {
+h1,
+h2 {
   font-family: "Shrikand";
 }
-a {
-  color: inherit;
-  text-decoration: none;
+.concept-store {
+  background: #f0f2f2;
+  padding: 2rem;
+  text-align: center;
 }
-.descover-item {
-  display: flex;
-  justify-content: center;
+
+.header-paragraph {
+  margin-bottom: 2rem;
+}
+
+.first-button {
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #ded9d9;
+  border-radius: 40px;
+  box-shadow: 1px 1px 12px #bababa;
+  color: white;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  font-size: 14px;
+  padding: 18px 24px;
+  cursor: pointer;
 }
