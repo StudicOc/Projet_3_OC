@@ -11,6 +11,12 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --color-primary: #9356dc;
+  --color-secondary: #ff79da;
+  --color-tertiary: #99e2d0;
+  --font-family-tittle: "Shrikand";
+}
 .logo {
   width: 200px;
 }
@@ -49,7 +55,7 @@ input[type="text"] {
 }
 h1,
 h2 {
-  font-family: "Shrikand";
+  font-family: var(--font-family-tittle);
 }
 .concept-store {
   background: #f0f2f2;
@@ -61,6 +67,12 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.first-button:hover {
+  cursor: pointer;
+  transition: transform 0.5s, -moz-transform 0.5s;
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
 .first-button {
   text-decoration: none;
   font-weight: bold;
@@ -99,12 +111,13 @@ article {
   box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 20%);
   background-color: white;
   margin-bottom: 1.5em;
+  -moz-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  cursor: pointer;
 }
 
 article:hover {
-  cursor: pointer; /* souris lors de la selection */
-  -moz-transition: transform 0.5s, -moz-transform 0.5s;
-  transition: transform 0.5s;
+  cursor: pointer;
   transition: transform 0.5s, -moz-transform 0.5s;
   -moz-transform: scale(1.1);
   transform: scale(1.1);
@@ -112,7 +125,10 @@ article:hover {
 .text {
   padding-left: 1em;
 }
-
+.container-1 {
+  display: flex;
+  justify-content: center;
+}
 .container-1 ul li {
   border: 2px solid #f0f2f2;
   border-radius: 1rem;
@@ -126,6 +142,7 @@ article:hover {
   height: 3.5rem;
   width: 19rem;
   margin: 29px 0;
+  position: relative;
 }
 
 .container-1 ul li:hover {
@@ -136,12 +153,14 @@ article:hover {
   transform: scale(1.1);
 }
 .number {
-  background-color: #9356dc;
+  background-color: var(--color-primary);
   border-radius: 50%;
   padding: 7px;
   color: white;
   font-weight: bold;
   font-size: 10px;
+  position: absolute;
+  left: -1em;
 }
 
 .fa-mobile-alt,
@@ -149,13 +168,10 @@ article:hover {
 .fa-list-ul {
   color: #6b6464;
   margin-right: 1em;
+  font-size: 0.875em;
 }
-.fa-heart {
-  display: flex;
-  justify-content: end;
-  position: relative;
-  top: -2em;
-  right: 1.5em;
+.icon-heart {
+  font-size: 1.33em;
 }
 .fa-heart:hover {
   cursor: pointer; /* souris lors de la selection */
@@ -164,7 +180,7 @@ article:hover {
   transition: transform 0.5s, -moz-transform 0.5s;
   -moz-transform: scale(1.1);
   transform: scale(1.1);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
 }
 
 h2 {
@@ -189,7 +205,7 @@ h2 {
 }
 .tittle-footer {
   font-style: italic;
-  font-family: "Shrikand";
+  font-family: var(--font-family-tittle);
   color: white;
   font-size: 17px;
   padding-left: 10px;
@@ -208,24 +224,75 @@ footer {
 }
 /* CSS page de menu 1 */
 
+.element {
+  position: absolute;
+  left: 1em;
+  top: 1.7em;
+}
+.tittle-second-page {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  position: relative;
+}
 .img-page-2 {
   width: 100%;
   object-fit: cover;
   height: 170px;
 }
-
-/* CSS media quieries */
-
-@media screen and (min-width: 768px) {
-  .container-1 {
-    display: flex;
-    justify-content: center;
-  }
-  h2 {
-    display: flex;
-    justify-content: center;
-  }
+.text-transform {
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--color-tertiary);
+  width: 40px;
 }
+
+.font-style-h2 {
+  font-family: var(--font-family-tittle);
+}
+.padding-section {
+  padding: 1em;
+}
+
+.text-item {
+  font-size: small;
+  padding-left: 1em;
+  padding-top: 1em;
+}
+.tittle-logo {
+  font-family: var(--font-family-tittle);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2em;
+}
+.element-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5em;
+  font-weight: bold;
+}
+
+.article-second-page {
+  margin-top: 1em;
+}
+
+button {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #ded9d9;
+  border-radius: 40px;
+  box-shadow: 1px 1px 12px #bababa;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  font-size: 14px;
+  cursor: pointer;
+  height: 3.4rem;
+  width: 12rem;
+}
+.position-order {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+/* CSS media quieries */
 
 @media screen and (max-width: 340px) /* Pour les écrans à taille réduite */ {
   .container-1 ul li {
