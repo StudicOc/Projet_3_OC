@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../Font/Roboto/Roboto-Light.ttf") format("truetype");
+  src: url("/Public/Font/Roboto/Roboto-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url("../Font/Shrikand/Shrikhand-Regular.ttf") format("truetype");
+  src: url("/Public/Font/Shrikand/Shrikhand-Regular.ttf") format("truetype");
 }
 * {
   font-family: "Roboto";
@@ -82,7 +82,7 @@ h2 {
   color: white;
   background: linear-gradient(0deg, #9356dc, #ff79da);
   font-size: 14px;
-  padding: 18px 24px;
+
   cursor: pointer;
 }
 
@@ -171,7 +171,7 @@ article:hover {
   font-size: 0.875em;
 }
 .icon-heart {
-  font-size: 1.33em;
+  font-size: 0.875em;
 }
 .fa-heart:hover {
   cursor: pointer; /* souris lors de la selection */
@@ -224,6 +224,9 @@ footer {
 }
 /* CSS page de menu 1 */
 
+.Tiitle.logo {
+  padding: 1em;
+}
 .element {
   position: absolute;
   left: 1em;
@@ -238,16 +241,18 @@ footer {
 .img-page-2 {
   width: 100%;
   object-fit: cover;
-  height: 170px;
+  height: 180px;
 }
 .text-transform {
   text-transform: uppercase;
   border-bottom: 3px solid var(--color-tertiary);
   width: 40px;
+  font-weight: inherit;
 }
 
 .font-style-h2 {
   font-family: var(--font-family-tittle);
+  padding: 1em;
 }
 .padding-section {
   padding: 1em;
@@ -264,7 +269,7 @@ footer {
   font-weight: bold;
   font-size: 2em;
 }
-.element-icon {
+.element-price {
   display: flex;
   justify-content: flex-end;
   padding-right: 1.5em;
@@ -274,7 +279,24 @@ footer {
 .article-second-page {
   margin-top: 1em;
 }
+.heart-seconde-page {
+  position: relative;
+}
+.fa-heart {
+  font-size: larger;
+}
+.position-absolute {
+  position: absolute;
+  right: 2em;
+  bottom: 3em;
+}
 
+.section-menu {
+  background-color: #f0f2f2;
+  border-radius: 2.5em 2.5em 0 0;
+  margin-top: 1em;
+  padding-bottom: 10px;
+}
 button {
   font-weight: bold;
   color: white;
