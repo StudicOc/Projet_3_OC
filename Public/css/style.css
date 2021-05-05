@@ -48,7 +48,6 @@ input[type="text"] {
   border: none;
   appearance: none;
   background: #e8ebeb;
-  outline: none;
   box-shadow: inset 0 10px 10px -6px #bdbfbf;
   text-align: center;
   padding: 2em 0;
@@ -67,12 +66,6 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.first-button:hover {
-  cursor: pointer;
-  transition: transform 0.5s, -moz-transform 0.5s;
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
-}
 .first-button {
   text-decoration: none;
   font-weight: bold;
@@ -82,8 +75,8 @@ h2 {
   color: white;
   background: linear-gradient(0deg, #9356dc, #ff79da);
   font-size: 14px;
-
   cursor: pointer;
+  transform: scale(1);
 }
 
 .img-section {
@@ -116,12 +109,6 @@ article {
   cursor: pointer;
 }
 
-article:hover {
-  cursor: pointer;
-  transition: transform 0.5s, -moz-transform 0.5s;
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
-}
 .text {
   padding-left: 1em;
 }
@@ -145,13 +132,6 @@ article:hover {
   position: relative;
 }
 
-.container-1 ul li:hover {
-  -moz-transition: transform 0.5s, -moz-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -moz-transform 0.5s;
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
-}
 .number {
   background-color: var(--color-primary);
   border-radius: 50%;
@@ -170,18 +150,6 @@ article:hover {
   margin-right: 1em;
   font-size: 0.875em;
 }
-.icon-heart {
-  font-size: 0.875em;
-}
-.fa-heart:hover {
-  cursor: pointer; /* souris lors de la selection */
-  -moz-transition: transform 0.5s, -moz-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -moz-transform 0.5s;
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
-  background-color: var(--color-primary);
-}
 
 h2 {
   margin-bottom: 1em;
@@ -191,14 +159,11 @@ h2 {
   background-color: #f0f2f2;
   padding: 0.2em 1em 1em 1em;
 }
-.second-section:hover {
-  -moz-transition: transform 0.5s, -moz-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -moz-transform 0.5s;
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
+.display-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5em;
 }
-
 .fa-utensils,
 .fa-hands-helping {
   padding-right: 1em;
@@ -241,7 +206,7 @@ footer {
 .img-page-2 {
   width: 100%;
   object-fit: cover;
-  height: 180px;
+  height: 200px;
 }
 .text-transform {
   text-transform: uppercase;
@@ -269,11 +234,16 @@ footer {
   font-weight: bold;
   font-size: 2em;
 }
+.Explain {
+  padding-top: 0.3em;
+}
 .element-price {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 1.5em;
   font-weight: bold;
+  font-size: small;
+  display: flex;
+  justify-content: end;
+  padding-right: 1.5em;
+  padding-bottom: 0.5em;
 }
 
 .article-second-page {
@@ -290,12 +260,16 @@ footer {
   right: 2em;
   bottom: 3em;
 }
-
-.section-menu {
+.top-img {
+  position: relative;
+}
+.background-section {
   background-color: #f0f2f2;
-  border-radius: 2.5em 2.5em 0 0;
-  margin-top: 1em;
+  border-radius: 1.9em 1.9em 0 0;
+  margin-top: -5em;
   padding-bottom: 10px;
+  position: relative;
+  z-index: 5;
 }
 button {
   font-weight: bold;
@@ -315,6 +289,14 @@ button {
   margin-bottom: 3rem;
 }
 /* CSS media quieries */
+
+@media (min-width: 992px) {
+  .container-1 ul li {
+    display: inline-flex;
+    margin: 2rem;
+    width: 15rem;
+  }
+}
 
 @media screen and (max-width: 340px) /* Pour les écrans à taille réduite */ {
   .container-1 ul li {
