@@ -17,6 +17,40 @@
   --color-tertiary: #99e2d0;
   --font-family-tittle: "Shrikand";
 }
+
+.loader-spinner {
+  width: 100px;
+  height: 100px;
+  border: 6px solid var(--color-primary);
+  border-radius: 50%;
+  border-top-color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
+  border-left-color: var(--color-tertiary);
+  margin: auto;
+  position: absolute;
+  -webkit-animation: spin 3s linear infinite;
+  -o-animation: spin 3s linear infinite;
+  -moz-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/*Animation loading spinner*/
+@keyframes spin {
+  0% {
+    transform: scale(1) rotate(360deg);
+  }
+
+  50% {
+    transform: scale(0.5) rotate(-360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
 .logo {
   width: 200px;
 }
@@ -66,19 +100,6 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.first-button {
-  text-decoration: none;
-  font-weight: bold;
-  border: 2px solid #ded9d9;
-  border-radius: 40px;
-  box-shadow: 1px 1px 12px #bababa;
-  color: white;
-  background: linear-gradient(0deg, #9356dc, #ff79da);
-  font-size: 14px;
-  cursor: pointer;
-  transform: scale(1);
-}
-
 .img-section {
   width: 100%;
   height: 170px;
@@ -107,6 +128,7 @@ article {
   -moz-transition-duration: 0.1s;
   transition-duration: 0.1s;
   cursor: pointer;
+  padding-bottom: 1em;
 }
 
 .text {
@@ -159,11 +181,15 @@ h2 {
   background-color: #f0f2f2;
   padding: 0.2em 1em 1em 1em;
 }
-.display-icon {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 1.5em;
+.position-icon {
+  position: relative;
 }
+.position-heart-1 {
+  position: absolute;
+  right: 2em;
+  bottom: 1em;
+}
+
 .fa-utensils,
 .fa-hands-helping {
   padding-right: 1em;
@@ -189,19 +215,25 @@ footer {
 }
 /* CSS page de menu 1 */
 
-.Tiitle.logo {
+.Item-menu {
   padding: 1em;
 }
-.element {
-  position: absolute;
-  left: 1em;
-  top: 1.7em;
+.tittle-logo {
+  font-family: var(--font-family-tittle);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2em;
 }
 .tittle-second-page {
   display: flex;
   justify-content: center;
   padding: 1em;
   position: relative;
+}
+.element {
+  position: absolute;
+  left: 1em;
+  top: 1.7em;
 }
 .img-page-2 {
   width: 100%;
@@ -228,27 +260,23 @@ footer {
   padding-left: 1em;
   padding-top: 1em;
 }
-.tittle-logo {
-  font-family: var(--font-family-tittle);
-  font-style: italic;
-  font-weight: bold;
-  font-size: 2em;
-}
+
 .Explain {
   padding-top: 0.3em;
 }
 .element-price {
   font-weight: bold;
   font-size: small;
-  display: flex;
-  justify-content: end;
-  padding-right: 1.5em;
-  padding-bottom: 0.5em;
+  position: absolute;
+  right: 0.8em;
+  bottom: 0.5em;
 }
 
 .article-second-page {
   margin-top: 1em;
   margin-bottom: 0.1em;
+  padding-bottom: 0.4em;
+  position: relative;
 }
 .heart-seconde-page {
   position: relative;
@@ -274,12 +302,10 @@ footer {
 }
 button {
   font-weight: bold;
-  color: white;
   text-decoration: none;
   border: 2px solid #ded9d9;
   border-radius: 40px;
   box-shadow: 1px 1px 12px #bababa;
-  background: linear-gradient(0deg, #9356dc, #ff79da);
   font-size: 14px;
   cursor: pointer;
   height: 3.4rem;
@@ -297,6 +323,26 @@ button {
     display: inline-flex;
     margin: 2rem;
     width: 15rem;
+  }
+  .section-button {
+    position: relative;
+    top: -9.5em;
+    right: 25em;
+  }
+}
+@media (min-width: 768px) {
+  article {
+    width: 50%;
+    margin: 0.5em;
+  }
+  .section-button {
+    position: relative;
+    top: -9.5em;
+    right: -14em;
+  }
+  .postion-desktop {
+    display: flex;
+    padding: 2em;
   }
 }
 
