@@ -10,6 +10,11 @@
   font-family: "Shrikand";
   src: url("../Font/Shrikand/Shrikhand-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Font Awesome Free 5 15 3";
+  src: url(../Fontawesome/fontawesome-free-5.15.3-web/css/all.min.css);
+}
+
 * {
   font-family: "Roboto";
   margin: 0;
@@ -21,43 +26,47 @@
   --color-tertiary: #99e2d0;
   --font-family-tittle: "Shrikand";
 }
-/*Animation Check */
+/*Animation check*/
+.article-second-page {
+   transition: transform 300ms linear;
+   position: relative;
+}
 
-.article-second-page{
-  transition: transform 330ms ease-in-out;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+ .article-second-page::before {
+
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f058";
+  font-size: medium;
+  position: absolute;
+  top:1em;
+  right: 1em;
+  opacity: 0;
+  z-index: 1;
+  transition: transform 300ms linear;
+ }
+.article-second-page:hover::before {
+  transform: rotate(360deg);
+  opacity: 1;
 }
 .article-second-page::after {
-content: "/";
-font-family: "Font Awesome Free 5";
-position: absolute;
-top: 0;
-right: 0;
-width: 15px;
-height: 100%;
-background: var(--color-tertiary);
-border-radius: 0em 1em 1em 0em;
-transition: transform 330ms ease-in-out;
-}
-.article-second-page:hover{
-  transform: scaleX(9);
-}
-.article-second-page .element-price:hover {
-    text-indent: -20px;
-}
-.article-second-page .element-price:hover:after {
+  content: "";
+  position: absolute;
+  top:0;
   right: 0;
-  text-indent: 0px;
+  width: 15px;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  background: var(--color-tertiary);
+  transition: transform 300ms linear;
+}
+.article-second-page:hover::after {
+   transform:scaleX(9);
+   opacity: 1;
+ 
 }
 
-/*
-  transition: transform 330ms ease-in-out;
-
-  transform: rotate(360deg);
-  tranform:scaleX(9)
-*/
 
 /* Animation CSS3*/
 
@@ -84,22 +93,13 @@ transition: transform 330ms ease-in-out;
 }
 /*Animation ul li acceuil */
 .container-1 ul li {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
+
   transform: scale(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 400ms;
-  -o-transition-duration: 400ms;
   transition-duration: 400ms;
 }
 .container-1 ul li:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.15);
-  -ms-transform: scale(1.15);
   transform: scale(1.15);
 }
 /* Animation article page d'acceuil*/
@@ -107,28 +107,11 @@ transition: transform 330ms ease-in-out;
 
 
 button {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 400ms;
-  -o-transition-duration: 400ms;
   transition-duration: 400ms;
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#9356dc),
-    to(#ff79da)
-  );
-  background: -o-linear-gradient(bottom, #9356dc, #ff79da);
   background: linear-gradient(0deg, #9356dc, #ff79da);
   color: white;
-  -webkit-box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
   transition-property: transform;
   transition-duration: 400ms;
@@ -136,29 +119,18 @@ button {
 
 button:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.15);
-  -ms-transform: scale(1.15);
   transform: scale(1.15);
-  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-  -webkit-filter: brightness(1.1);
   filter: brightness(1.1);
 }
 
+
 /*Animation loading spinner*/
 .loader-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+ 
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -170,7 +142,6 @@ button:hover {
   /* animation-fill-mode:forwards; */
   /* animation-delay:3s; */
   /*animation-name:hidden*/
-  -webkit-animation: hidden 0.5s linear 1 forwards 3s;
   animation: hidden 0.5s linear 1 forwards 3s;
 }
 .loader {
@@ -181,16 +152,9 @@ button:hover {
   border-top-color: var(--color-secondary);
   border-bottom-color: var(--color-secondary);
   border-left-color: var(--color-tertiary);
-  -webkit-animation: spin 0.3s infinite;
   animation: spin 0.3s infinite;
 }
 
-@-webkit-keyframes hidden {
-  100% {
-    opacity: 0;
-    z-index: -1; /*disparition des éléments*/
-  }
-}
 
 @keyframes hidden {
   100% {
@@ -199,102 +163,64 @@ button:hover {
   }
 }
 
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 
 @keyframes spin {
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 /*Animation menu */
 .kayframes-1-menu {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-name: slidown;
   animation-name: slidown;
 
   /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
 }
 
-@-webkit-keyframes slidown {
-  0% {
-    -webkit-transform: translateY(200px);
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 @keyframes slidown {
   0% {
-    -webkit-transform: translateY(200px);
+    
     transform: translateY(200px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
+   
     transform: translateY(0);
     opacity: 1;
   }
 }
 .kayframes-2-menu {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-name: next-slidown;
-  animation-name: next-slidown;
-}
 
-@-webkit-keyframes next-slidown {
-  0% {
-    -webkit-transform: translateY(200px);
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
+  animation-duration: 3s;
+  animation-name: next-slidown;
 }
 
 @keyframes next-slidown {
   0% {
-    -webkit-transform: translateY(200px);
     transform: translateY(200px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
 }
 
 .kayframes-3-menu {
-  -webkit-animation-duration: 6s;
+
   animation-duration: 6s;
-  -webkit-animation-name: last-slidown;
   animation-name: last-slidown;
 }
 
 @-webkit-keyframes last-slidown {
   0% {
-    -webkit-transform: translateY(200px);
+   
     transform: translateY(200px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
+
     transform: translateY(0);
     opacity: 1;
   }
@@ -302,12 +228,12 @@ button:hover {
 
 @keyframes last-slidown {
   0% {
-    -webkit-transform: translateY(200px);
+  
     transform: translateY(200px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
+  
     transform: translateY(0);
     opacity: 1;
   }
