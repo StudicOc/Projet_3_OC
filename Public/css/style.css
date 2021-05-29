@@ -83,27 +83,19 @@
   -moz-transition: transform 300ms linear;
   -ms-transition: transform 300ms linear;
   -o-transition: transform 300ms linear;
+  -webkit-transition:transform 300ms linear,;
 }
 .article-second-page:hover::after {
-   overflow: hidden;
-   transform:scaleX(9);
-   opacity: 1;
-   -webkit-transform:scaleX(9);
-   -moz-transform:scaleX(9);
-   -ms-transform:scaleX(9);
-   -o-transform:scaleX(9);
+  overflow: hidden;
+  transform:scaleX(9);
+  opacity: 1;
+  -webkit-transform:scaleX(9);
+  -moz-transform:scaleX(9);
+  -ms-transform:scaleX(9);
+  -o-transform:scaleX(9);
+
 }
 
-.element-price {
-   transition: transform 300ms linear;
-}
-.element-price:hover {
-  transform: translateX(-200px);
-  -webkit-transform: translateX(-200px);
-  -moz-transform: translateX(-200px);
-  -ms-transform: translateX(-200px);
-  -o-transform: translateX(-200px);
-} 
 
 /*Animation icon heart*/
 
@@ -623,7 +615,8 @@ footer {
   text-transform: uppercase;
   border-bottom: 3px solid var(--color-tertiary);
   width: 40px;
-  font-weight: inherit;
+  font-family: "RobotoLight";
+  font-weight: 100;
 }
 
 .font-style-h2 {
