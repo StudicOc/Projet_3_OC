@@ -43,20 +43,20 @@
 }
 
  .article-second-page::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f058";
-  position: absolute;
-  font-size: x-large;
-  top: 0.5em;
-  right: 1em;
-  opacity: 0;
-  z-index: 2;
-  transition: transform 300ms linear;
-  -webkit-transition: transform 300ms linear;
-  -moz-transition: transform 300ms linear;
-  -ms-transition: transform 300ms linear;
-  -o-transition: transform 300ms linear;
+   font-family: "Font Awesome 5 Free";
+   font-weight: 400;
+   content: "\f058";
+   position: absolute;
+   font-size: x-large;
+   top: 0.5em;
+   right: 1em;
+   opacity: 0;
+   z-index: 2;
+   transition: transform 330ms ease-in-out;
+   -webkit-transition: transform 330ms ease-in-out;
+   -moz-transition: transform 330ms ease-in-out;
+   -ms-transition: transform 330ms ease-in-out;
+   -o-transition: transform 330ms ease-in-out;
 }
 .article-second-page:hover::before {
   transform: rotate(360deg);
@@ -68,24 +68,23 @@
   color: white;
 }
 .article-second-page::after {
-  content: "";
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 15px;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  overflow: hidden;
-  background: var(--color-tertiary);
-  transition: transform 300ms linear;
-  -webkit-transition: transform 300ms linear;
-  -moz-transition: transform 300ms linear;
-  -ms-transition: transform 300ms linear;
-  -o-transition: transform 300ms linear;
-  -webkit-transition:transform 300ms linear,;
+   content: "";
+   position: absolute;
+   top:0;
+   right: 0;
+   width: 15px;
+   height: 100%;
+   z-index: 1;
+   opacity: 0;
+   overflow: hidden;
+   background: var(--color-tertiary);
+   transition: transform 250ms ease-in-out;
+   -webkit-transition: transform 250ms ease-in-out;
+   -moz-transition: transform 250ms ease-in-out;
+   -ms-transition: transform 250ms ease-in-out;
+   -o-transition: transform 250ms ease-in-out;
 }
-.article-second-page:hover::after {
+.article-second-page:hover:after {
   overflow: hidden;
   transform:scaleX(9);
   opacity: 1;
@@ -95,7 +94,14 @@
   -o-transform:scaleX(9);
 
 }
-
+.text-item {
+  position: relative;
+}
+.article-second-page:hover  .text-item .element-price {
+      position: absolute;
+      right: 6em;
+      text-overflow: ellipsis;   
+}
 
 /*Animation icon heart*/
 
