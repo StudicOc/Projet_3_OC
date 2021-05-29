@@ -46,9 +46,9 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f058";
-  font-size: medium;
   position: absolute;
-  top:1em;
+  font-size: x-large;
+  top: 0.5em;
   right: 1em;
   opacity: 0;
   z-index: 2;
@@ -65,7 +65,7 @@
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
   opacity: 1;
-  
+  color: white;
 }
 .article-second-page::after {
   content: "";
@@ -93,6 +93,17 @@
    -ms-transform:scaleX(9);
    -o-transform:scaleX(9);
 }
+
+.element-price {
+   transition: transform 300ms linear;
+}
+.element-price:hover {
+  transform: translateX(-200px);
+  -webkit-transform: translateX(-200px);
+  -moz-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  -o-transform: translateX(-200px);
+} 
 
 /*Animation icon heart*/
 
@@ -445,7 +456,7 @@ input[type="text"] {
 }
 button {
   font-weight: bold;
-  border: 2px solid #ded9d9;
+  border: 0px solid #ded9d9;
   border-radius: 40px;
   font-size: 14px;
   cursor: pointer;
@@ -491,6 +502,11 @@ article {
   -moz-border-radius: 1em 1em;
   -ms-border-radius: 1em 1em;
   -o-border-radius: 1em 1em;
+}
+.flex-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .text {
@@ -630,6 +646,8 @@ footer {
 .element-price {
   font-weight: bold;
   font-size: small;
+  display: inline;
+ text-indent: -30px;
 
 }
 
