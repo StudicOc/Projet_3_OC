@@ -95,14 +95,30 @@
   -o-transform:scaleX(9);
 
 }
-.text-item {
+
+.article-second-page:hover  .text-item .element-price{
   position: relative;
+  animation: moveprice 1s;
+  -webkit-animation: moveprice 1s;
 }
-.article-second-page:hover  .text-item .element-price {
-      position: absolute;
-      right: 6em;
-      
+@keyframes moveprice {
+  0% {
+  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  -o-transform: translateX(20px);
 }
+ 
+100% {
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+}
+}
+
 
 /*Animation icon heart*/
 
@@ -320,7 +336,7 @@ button:hover {
 
 @keyframes slidown {
   0% {
-    transform: translateY(200px);
+    transform: translateY(-200px);
     opacity: 0;
     -webkit-transform: translateY(200px);
     -moz-transform: translateY(200px);
@@ -348,7 +364,7 @@ button:hover {
 
 @keyframes next-slidown {
   0% {
-    transform: translateY(200px);
+    transform: translateY(-200px);
     opacity: 0;
     -webkit-transform: translateY(200px);
     -moz-transform: translateY(200px);
