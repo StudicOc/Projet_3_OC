@@ -605,7 +605,9 @@ footer {
   padding-top: 1em;
 }
 /* CSS page de menu 1/2//3/4 */
-
+ .display-h3{
+   padding-bottom: 1em;
+ }
 .Item-menu {
   padding: 1em;
 }
