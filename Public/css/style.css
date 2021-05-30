@@ -233,7 +233,7 @@ button {
   color: white;
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
   transition-property: transform;
-  transition-duration: 400ms;
+  transition-duration: 400ms;/* 400ms pour arriver et partir*/
   -moz-transition-property: transform;
   -moz-transition-duration: 400ms;
   -webkit-transition-property: transform;
