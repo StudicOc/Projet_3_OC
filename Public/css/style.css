@@ -33,13 +33,13 @@
 
 /*Animation check*/
 .article-second-page {
-   transition: transform 300ms ease-in-out;
+   transition: transform 5s;
    position: relative;
    overflow: hidden;
-   -webkit-transition: transform 300ms ease-in-out;
-   -moz-transition: transform 300ms ease-in-out;
-   -ms-transition: transform 300ms ease-in-out;
-   -o-transition: transform 300ms ease-in-out;
+   -webkit-transition: transform 5s;
+   -moz-transition: transform 5s;
+   -ms-transition: transform 5s;
+   -o-transition: transform 5s;
 }
 
  .article-second-page::before {
@@ -52,11 +52,12 @@
    right: 1em;
    opacity: 0;
    z-index: 2;
-   transition: transform 330ms ease-in-out;
-   -webkit-transition: transform 330ms ease-in-out;
-   -moz-transition: transform 330ms ease-in-out;
-   -ms-transition: transform 330ms ease-in-out;
-   -o-transition: transform 330ms ease-in-out;
+   transition: transform 300ms;
+  
+   -webkit-transition: transform 300ms;
+   -moz-transition: transform 300ms;
+   -ms-transition: transform 300ms;
+   -o-transition: transform 300ms;
 }
 .article-second-page:hover::before {
   transform: rotate(360deg);
@@ -225,7 +226,7 @@
 /* Animation button */
 
 button {
-  transform: scale(1);
+ 
   transition-property: transform;
   transition-duration: 400ms;
   background: linear-gradient(0deg, #9356dc, #ff79da);
@@ -233,10 +234,10 @@ button {
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
   transition-property: transform;
   transition-duration: 400ms;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
+  -moz-transition-property: transform;
+  -moz-transition-duration: 400ms;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 400ms;
 }
 
 button:hover {
@@ -282,7 +283,7 @@ button:hover {
   border-top-color: var(--color-secondary);
   border-bottom-color: var(--color-secondary);
   border-left-color: var(--color-tertiary);
-  animation: spin 0.3s infinite;
+  animation: spin 0.3s infinite; 
   -moz-animation: spin 0.3s infinite;
   -webkit-animation: spin 0.3s infinite;
   -o-animation: spin 0.3s infinite;
