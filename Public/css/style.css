@@ -33,13 +33,13 @@
 
 /*Animation check*/
 .article-second-page {
-   transition: transform 300ms linear;
+   transition: transform 300ms ease-in-out;
    position: relative;
    overflow: hidden;
-   -webkit-transition: transform 300ms linear;
-   -moz-transition: transform 300ms linear;
-   -ms-transition: transform 300ms linear;
-   -o-transition: transform 300ms linear;
+   -webkit-transition: transform 300ms ease-in-out;
+   -moz-transition: transform 300ms ease-in-out;
+   -ms-transition: transform 300ms ease-in-out;
+   -o-transition: transform 300ms ease-in-out;
 }
 
  .article-second-page::before {
@@ -100,40 +100,40 @@
 .article-second-page:hover  .text-item .element-price {
       position: absolute;
       right: 6em;
-      text-overflow: ellipsis;   
+      
 }
 
 /*Animation icon heart*/
 
 .heart {
   position: relative;
-  transition: 0.5s;
+  transition:2s ;
   cursor: pointer;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  -webkit-transition:2s ;
+  -moz-transition:2s ;
+  -ms-transition:2s ;
+  -o-transition:2s ;
 }
 .heart :nth-child(1) {
   opacity: 0;
   position: absolute;
-  transition: 0.5s;
+  transition: 2s ;
   right: 1em;
   top: -1.5em;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  -webkit-transition: 2s ;
+  -moz-transition: 2s ;
+  -ms-transition: 2s ;
+  -o-transition: 2s ;
 }
 .heart :nth-child(2) {
   position: absolute;
-  transition: 0.5s;
+  transition: 2s;
   right: 1em;
   top: -1.5em;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
 }
 .heart:hover :nth-child(2) {
   opacity: 0;
@@ -145,9 +145,9 @@
   background: linear-gradient(to top, #9356dc, #ff79da);
   color: transparent;
   overflow: hidden;
-  background-clip:text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
+  background-clip: text;
+ -moz-background-clip: text;
+-webkit-background-clip: text;
 }
 /* Animation heart second-page */
 .heart-second {
@@ -196,13 +196,8 @@
 }
 /*Animation ul li acceuil */
 .container-1 ul li {
-  transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  -moz-transform: scale(1);
   
 }
 .container-1 ul li:hover {
