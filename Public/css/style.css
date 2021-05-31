@@ -95,29 +95,21 @@
   -o-transform:scaleX(9);
 
 }
+.article-second-page .text-item .element-price {
+  transition: transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  -moz-transition: transform 250ms linear;
+  -ms-transition: transform 250ms linear;
+  -o-transition: transform 250ms linear;
+}
+ .article-second-page:hover  .text-item .element-price{
+  transform: translateX(-70px);
+  -webkit-transform: translateX(-70px);
+  -moz-transform: translateX(-70px);
+  -ms-transform: translateX(-70px);
+  -o-transform: translateX(-70px);
+}
 
-.article-second-page:hover  .text-item .element-price{
-  position: relative;
-  animation: moveprice 1s;
-  -webkit-animation: moveprice 1s;
-}
-@keyframes moveprice {
-  0% {
-  transform: translateX(20px);
-  -webkit-transform: translateX(20px);
-  -moz-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  -o-transform: translateX(20px);
-}
- 
-100% {
-  transform: translateX(0px);
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
-}
-}
 
 
 /*Animation icon heart*/
