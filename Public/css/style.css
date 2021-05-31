@@ -112,6 +112,7 @@
 }
 
 
+
 /*Animation icon heart*/
 
 .heart {
@@ -766,4 +767,10 @@ padding-bottom: 2em;
   .container-1 ul li {
     width: 17rem;
   }
+  .Explain:hover {
+      text-overflow: ellipsis;
+    overflow: hidden;
+    width: 150px;
+    white-space: nowrap;
+}
 }
