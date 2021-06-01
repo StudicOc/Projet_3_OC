@@ -42,33 +42,30 @@
    -o-transition: transform 5s;
 }
 
-.article-second-page::before {
-   font-family: "Font Awesome 5 Free";
-   font-weight: 400;
-   content: "\f058";
-   position: absolute;
-   font-size: x-large;
-   top: 0.8em;
-   right: 1em;
-   opacity: 0;
-   z-index: 2;
-   color: white;
-   transition: transform 300ms;
-   -webkit-transition: transform 300ms;
-   -moz-transition: transform 300ms;
-   -ms-transition: transform 300ms;
-   -o-transition: transform 300ms;
-   
-  
+.i-con {
+  position: relative;
 }
-.article-second-page:hover::before {
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  opacity: 1;
 
+.fa-check-circle {
+  position: absolute;
+  right: 1.7em;
+  top: -1.4em;
+  z-index: 2;
+  transition: transform 300ms;
+  opacity: 0;
+  -webkit-transition: transform 300ms;
+  -moz-transition: transform 300ms;
+  -ms-transition: transform 300ms;
+  -o-transition: transform 300ms;
+}
+.article-second-page:hover .text-item .fa-check-circle {
+   transform: rotate(720deg);
+   -webkit-transform: rotate(720deg);
+   -moz-transform: rotate(720deg);
+   -ms-transform: rotate(720deg);
+   -o-transform: rotate(720deg);
+   opacity: 1;
+   color: white;
 }
 .article-second-page::after {
    content: "";
@@ -77,7 +74,6 @@
    right: 0;
    width: 15px;
    height: 100%;
-   z-index: 1;
    opacity: 0;
    overflow: hidden;
    background: var(--color-tertiary);
@@ -97,13 +93,14 @@
   -o-transform:scaleX(9);
 
 }
-.article-second-page .text-item .element-price {
+.article-second-page .text-item .element-price{
 
   transition: transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   -moz-transition: transform 250ms linear;
   -ms-transition: transform 250ms linear;
   -o-transition: transform 250ms linear;
+  z-index: 1;
 }
  .article-second-page:hover  .text-item .element-price{
   transform: translateX(-70px);
@@ -137,6 +134,7 @@
   -ms-transition: 2s ;
   -o-transition: 2s ;
 }
+
 .heart :nth-child(2) {
   position: absolute;
   transition: 2s;
