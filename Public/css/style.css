@@ -93,6 +93,13 @@
   -o-transform:scaleX(9);
 
 }
+
+.article-second-page h4,
+.article-second-page .explain{
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+}
 .article-second-page .text-item .element-price{
 
   transition: transform 250ms linear;
@@ -765,18 +772,13 @@ padding-bottom: 2em;
 
 /*Media quieris */
 @media  screen and (max-width: 480px) {
-  .Explain:hover {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 150px;
-    white-space: nowrap;
+  .article-second-page h4,
+.article-second-page .explain{
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
 }
- h3:hover {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 150px;
-    white-space: nowrap;
-  }
+
 
 }
 
@@ -784,16 +786,12 @@ padding-bottom: 2em;
   .container-1 ul li {
     width: 17rem;
   }
-  h3:hover {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 150px;
-    white-space: nowrap;
-  }
- .Explain:hover {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 150px;
-    white-space: nowrap;
+
+.article-second-page h4,
+.article-second-page .explain{
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
 }
+
 }
