@@ -772,8 +772,9 @@ padding-bottom: 2em;
 
 /*Media quieris */
 @media  screen and (max-width: 480px) {
-  .article-second-page h4,
-.article-second-page .explain{
+
+  .article-second-page:hover h4,
+.article-second-page:hover .explain{
 text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
@@ -786,9 +787,8 @@ white-space: nowrap;
   .container-1 ul li {
     width: 17rem;
   }
-
-.article-second-page h4,
-.article-second-page .explain{
+.article-second-page:hover h4,
+.article-second-page:hover .explain{
 text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
