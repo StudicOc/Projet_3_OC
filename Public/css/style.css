@@ -771,12 +771,24 @@ padding-bottom: 2em;
     width: 150px;
     white-space: nowrap;
 }
+ h3:hover {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 150px;
+    white-space: nowrap;
+  }
 
 }
 
 @media screen and (max-width: 340px) /* Pour les écrans à taille réduite */ {
   .container-1 ul li {
     width: 17rem;
+  }
+  h3:hover {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 150px;
+    white-space: nowrap;
   }
  .Explain:hover {
     text-overflow: ellipsis;
