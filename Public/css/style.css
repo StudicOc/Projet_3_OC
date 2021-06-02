@@ -94,12 +94,7 @@
 
 }
 
-.article-second-page h4,
-.article-second-page .explain{
-text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
-}
+
 .article-second-page .text-item .element-price{
 
   transition: transform 250ms linear;
@@ -452,7 +447,7 @@ input[type="text"] {
   text-align: center;
   padding: 2em 0;
 }
-.Explain,
+.explain,
 .paragraph,
 .header-paragraph {
   font-family: "RobotoLight";
@@ -655,7 +650,7 @@ footer {
   padding-top: 1em;
 }
 
-.Explain {
+.explain {
   padding-top: 0.3em;
 }
 .element-price {
@@ -778,6 +773,7 @@ padding-bottom: 2em;
 text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
+max-width: 150px;
 }
 
 
@@ -792,6 +788,7 @@ white-space: nowrap;
 text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
+max-width: 150px;
 }
 
 }
