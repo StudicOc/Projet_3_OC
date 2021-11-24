@@ -27,5 +27,5 @@ Composition du site :
 
 - 1 page index racine.
 
-- style.css afin de jouer sur les animations css pour plus de dynamisme.
+- style.css afin de jouer sur les animations css pour plus de dynamisme !
 
