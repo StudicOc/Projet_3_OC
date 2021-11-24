@@ -12,7 +12,9 @@ Développer un site proposant le menu de 4 grands restaurants parisiens.
 Compatibilité :
 
 L’ensemble du site devra être responsive sur mobile, tablette et desktop.
+
 Les pages devront passer la validation W3C en HTML et CSS sans erreur.
+
 Le site doit être parfaitement compatible avec les dernières versions desktop de
 Chrome et Firefox.
 
@@ -21,4 +23,9 @@ Effets graphiques et animations : Utilisation  transitions CSS plus simples, uti
 
 Composition du site :
 
-4 pages de menu html, 1 page index racine, style.css.
+- 4 pages de menu html.
+
+- 1 page index racine.
+
+- style.css afin de jouer sur les animations css pour plus de dynamisme.
+
