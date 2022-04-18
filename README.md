@@ -1,25 +1,25 @@
 # Projet_3_OC
 
+# About ✨
+
 Ohmyfood est une entreprise de commande de repas en ligne. Le concept permet aux
 utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
 restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte
 !
 
-Objectifs du projet :
+# Development and realization 💻
 
-Développer un site proposant le menu de 4 grands restaurants parisiens.
+- Développer un site proposant le menu de 4 grands restaurants parisiens.
+- L’ensemble du site devra être responsive sur mobile, tablette et desktop.
 
-Compatibilité :
+- Les pages devront passer la validation W3C en HTML et CSS sans erreur.
 
-L’ensemble du site devra être responsive sur mobile, tablette et desktop.
+- Le site doit être parfaitement compatible avec les dernières versions desktop de
+  Chrome et Firefox.
 
-Les pages devront passer la validation W3C en HTML et CSS sans erreur.
+Effets graphiques et animations :
 
-Le site doit être parfaitement compatible avec les dernières versions desktop de
-Chrome et Firefox.
-
-
-Effets graphiques et animations : Utilisation  transitions CSS plus simples, utilisation complexes avec la règle CSS @keyframes.
+Utilisation des transitions et les keyframes. .
 
 Composition du site :
 
@@ -28,4 +28,3 @@ Composition du site :
 - 1 page index racine.
 
 - style.css afin de jouer sur les animations css pour plus de dynamisme !
-
